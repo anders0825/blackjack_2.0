@@ -10,11 +10,13 @@ body {
   width: 100svw;
   height: 100svh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 header {
+  width: 75svw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,13 +36,16 @@ header div {
 }
 
 .hero-section {
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   background-color: rgb(44, 109, 44);
-  width: 500px;
-  height: 500px;
+  width: 75svw;
+  max-width: 500px;
+  height: 75svh;
+  max-height: 500px;
   border: 2px solid goldenrod;
 }
 
