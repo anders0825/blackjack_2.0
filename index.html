@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="images/favicon_w.png" />
+    <script src="index.js" defer></script>
+    <title>BlackJack_2.0</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <div>
+          <h1>BlackJack</h1>
+          <p>...kind of</p>
+        </div>
+        <h2 id="message-el">Hey Kid, $20 per round. Want to play?</h2>
+      </header>
+      <section class="hero-section">
+        <div class="item-div">
+          <h2>Dealer Cards:</h2>
+          <p id="dealer-cards">...</p>
+        </div>
+        <div class="item-div">
+          <h2>Player Cards:</h2>
+          <p id="player-cards">...</p>
+          <div class="btn-div">
+            <button onclick="newGame()">NEW GAME</button>
+            <button onclick="hit()">HIT</button>
+            <button onclick="stand()">STAND</button>
+          </div>
+          <h3 id="player-chips">Chips: 200$</h3>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
