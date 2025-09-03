@@ -32,28 +32,32 @@ function render() {
 }
 
 function newGame() {
-  playerChips -= 20;
-  isAlive = true;
   playerCards = "...";
   playerSum = 0;
   dealerCards = "...";
   dealerSum = 0;
-  playerCards = [getRandomCard(), getRandomCard()];
+  if (playerChips > 0) {
+    playerChips -= 20;
+    isAlive = true;
 
-  for (let i in playerCards) {
-    playerSum += playerCards[i];
-  }
+    playerCards = [getRandomCard(), getRandomCard()];
 
-  if (playerSum > 21) {
-    message = "Bad Luck kid. he he he ";
-    lose();
-  } else if (playerSum === 21) {
-    win();
-    message = "U got Blackjack already? Wtf...?";
+    for (let i in playerCards) {
+      playerSum += playerCards[i];
+    }
+
+    if (playerSum > 21) {
+      message = "Bad Luck kid. he he he ";
+      lose();
+    } else if (playerSum === 21) {
+      win();
+      message = "U got Blackjack already? Wtf...?";
+    } else {
+      message = playerSum + ", HIT or STAND?";
+    }
   } else {
-    message = playerSum + ", HIT or STAND?";
+    message = "You're all out of cash kiddo... GUARDS!";
   }
-
   render();
 }
 
